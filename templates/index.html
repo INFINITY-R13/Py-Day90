@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Most Dangerous Writing App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>The Most Dangerous Writing App</h1>
+        <p class="subtitle">Stop typing and your work disappears!</p>
+        
+        <div class="controls">
+            <label for="timeLimit">Time limit (seconds):</label>
+            <input type="number" id="timeLimit" value="5" min="1" max="60">
+            <button id="startBtn">Start Writing</button>
+        </div>
+        
+        <div id="timer" class="timer">Ready to start</div>
+        
+        <textarea id="editor" placeholder="Click 'Start Writing' to begin. Keep typing or lose everything!" disabled></textarea>
+        
+        <div class="stats">
+            <span>Words: <strong id="wordCount">0</strong></span>
+            <span>Characters: <strong id="charCount">0</strong></span>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
